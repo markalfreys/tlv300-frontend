@@ -4,10 +4,10 @@ import './assets/styles/App.css'
 import Header from './components/Header'
 import SearchForm from './components/SearchForm'
 import Footer from './components/Footer'
+import Loading from './components/Loading'
 import { ContactInformationType, DomainInformationType, DomainType } from './types'
 import { getDomainDetails } from './action/domain'
 import { truncateString } from './utils/stringFormat'
-import Loading from './components/Loading'
 import bg from './assets/img/w9.jpg'
 
 const domainDetailsOBJ = {
