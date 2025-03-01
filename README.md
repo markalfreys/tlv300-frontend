@@ -16,6 +16,6 @@ How to setup in local:
 6. npm start
 7. Open your browser and go to [http://localhost:5000/]
 
-This repository is already deployed vercel.com
+This repository is already deployed to vercel.com
 https://tlv300-frontend.vercel.app/
 
