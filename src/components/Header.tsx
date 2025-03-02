@@ -1,3 +1,5 @@
+// Header Component
+
 const Header = () => {
   return (
     <header className='w-full'>
