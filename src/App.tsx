@@ -10,6 +10,7 @@ import { getDomainDetails } from './action/domain'
 import { truncateString } from './utils/stringFormat'
 import bg from './assets/img/w9.jpg'
 
+// Default object structure for domain details
 const domainDetailsOBJ = {
 	domainInformation: {
 		domainName: '',
@@ -29,11 +30,16 @@ const domainDetailsOBJ = {
 
 function App() {
 
+	// State to store domain details that will be display in tabled format
 	const [domainDetails, setDomainDetails] = useState<{ domainInformation: DomainInformationType, contactInformation: ContactInformationType }>(domainDetailsOBJ)
 
+	// State for error handling if domain details fetching fails
 	const [error, setError] = useState('')
+
+	// State for loading indicator when fetching domain details
 	const [loading, setLoading] = useState(false)
 
+	// Handles form submission to fetch domain details
 	const handleSearchSubmit = async (e: React.FormEvent<HTMLFormElement>, domain: DomainType) => {
 		e.preventDefault();
 		
@@ -43,19 +49,23 @@ function App() {
 		}
 		setLoading(true);
 
+		// Fetch domain details from API
 		const response = await getDomainDetails(domain);
 
 		setLoading(false);
 		if(!response.success) return setError(response.message);
 
+		// Update state with fetched data
 		setError('');
 		setDomainDetails(response.data)
 	}
 
+	 // State to toggle the display of domain and contact information
 	const [displayInfo, setDisplayInfo] = useState<{ domain: boolean, contact: boolean }>({
 		domain: true, contact: true
 	})
-	
+
+	// Handles toggling display of domain and contact details
 	const handleToggleDisplay = (infotype: string) => {
 		if(infotype === 'domain') {
 			console.log('Domain Information')
