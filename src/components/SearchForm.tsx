@@ -1,8 +1,13 @@
 import search from '../assets/img/search.svg'
 import { useState } from 'react'
 
+//SearchForm Component
+// 
+// This component allows users to input a domain name and submit a search request.
+// It also provides toggle options to display domain and contact information.
 function SearchForm({ handleSearchSubmit, handleToggleDisplay, displayInfo } : { handleSearchSubmit: any, handleToggleDisplay: any, displayInfo: { domain: boolean, contact: boolean } }) {
 
+	// State to store user input for the domain search
 	const [searchValue, setSearchValue] = useState<string>('')
 	
   return (
