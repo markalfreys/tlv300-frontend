@@ -14,7 +14,7 @@ How to setup in local:
 3. copy the .env from the document I've submitted to the Google Forms <Full Stack Developer Main Trial Task Submission> and paste it on the root dicrectory same directory with package.json
 4. run the following commands in your terminal:
 5. npm install
-6. npm start
+6. npm run dev
 7. Open your browser and go to [http://localhost:5000/]
 
 This repository is already deployed to vercel.com
