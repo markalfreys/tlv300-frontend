@@ -1,3 +1,5 @@
+
+// Loading Component used to display a loading spinner while the data is being fetched.
 const Loading = () => {
   return (
     <div className="text-center">
