@@ -8,7 +8,7 @@ import Loading from './components/Loading'
 import { ContactInformationType, DomainInformationType, DomainType } from './types'
 import { getDomainDetails } from './action/domain'
 import { truncateString } from './utils/stringFormat'
-import bg from './assets/img/w9.jpg'
+import bg from './assets/img/w9.webp'
 
 // Default object structure for domain details
 const domainDetailsOBJ = {
